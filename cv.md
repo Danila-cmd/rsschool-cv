@@ -1,4 +1,4 @@
-# RSschool-cv
+# rsschool-cv
 1. Danila Feduleev;
 2. Email: dvfeduleev@gmail.com. Phone number: 89172112194;
 3. I want to become an it specialist, firstly full stack developer(Java + JavaScript(React.js)). I have a great desire and ability to learn quickly and learn new things. I have a little commercial frontend developer experience;
