@@ -149,7 +149,7 @@ body {
     margin-top: 5px;
 }
 
-.contactInfo.language .percent div {
+.contactInfo.language .percent label {
     position: absolute;
     top: 0;
     left: 0;
@@ -222,7 +222,7 @@ p {
     background: #f0f0f0;
 }
 
-.skills .box .percent div {
+.skills .box .percent label {
     position: absolute;
     top: 0;
     left: 0;
