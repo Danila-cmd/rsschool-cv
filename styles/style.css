@@ -52,8 +52,6 @@ section.dark .container .left_Side {
     padding: 40px;
 }
 
-/* #263339 */
-
 section.dark .container .right_Side {
     color: #263339;
 }
@@ -356,6 +354,12 @@ nav li {
 nav li a {
     text-decoration: none;
     color: black;
+    transition: all .3s ease 0s;
+}
+
+nav ul li a:hover {
+    color:white;
+    text-decoration: underline;
 }
 
 .toggle {
