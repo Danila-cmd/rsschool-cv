@@ -7,12 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+section {
     background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background 0.5s;
 }
 
 .wrapper {
@@ -26,10 +27,13 @@ body {
     box-sizing: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
+section.dark .right_Side {
+    background: #323840;
+}
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    /* display: grid;
+    grid-template-columns: 1fr 2fr; */
 }
 
 .container .left_Side {
@@ -38,10 +42,20 @@ body {
     padding: 40px;
 }
 
+section.dark .container .left_Side {
+    background: #263339;
+}
+
 .container .right_Side {
     position: relative;
     background: #fff;
     padding: 40px;
+}
+
+/* #263339 */
+
+section.dark .container .right_Side {
+    color: #263339;
 }
 
 .profileText {
@@ -78,6 +92,10 @@ body {
     text-align: center;
     font-weight: 600;
     line-height: 1.4em;
+}
+
+section.dark .profileText h2 {
+    color: #ccc;
 }
 
 .profileText h2 span {
@@ -174,9 +192,18 @@ body {
     margin-bottom: 10px;
 }
 
+section.dark .title2 {
+    color: #0273a7;
+}
+
 p {
     color: #333;
 }
+
+section.dark p {
+    color: #ccc;
+}
+
 
 .about .box {
     display: flex;
@@ -242,6 +269,10 @@ p {
     margin: 10px 0;
 }
 
+section.dark .interest ul li {
+    color: rgb(165, 163, 163);
+}
+
 .interest ul li .fa {
     color: #03a9f4;
     font-size: 18px;
@@ -298,4 +329,63 @@ footer .github-icon {
     .skills .box {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    padding: 20px;
+    background: #87bbec;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    display: block;
+    padding: 0 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.toggle {
+    top: 20px;
+    right: 20px;
+    background: #e9f5ff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.dark .toggle {
+    background: #404852;
+}
+
+.toggle::before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: #2fa1ff;
+}
+
+section.dark .toggle:before {
+    content: '\f185';
+    color: #fff;
+}
+
+section.dark {
+    background: #242924;
 }
