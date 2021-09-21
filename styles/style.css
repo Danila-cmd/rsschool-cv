@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+section {
     background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background 0.5s;
 }
 
 .wrapper {
@@ -26,22 +27,29 @@ body {
     box-sizing: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+section.dark .right_Side {
+    background: #323840;
 }
 
-.container .left_Side {
+.left_Side {
     position: relative;
     background: #003147;
     padding: 40px;
+    max-width: 1320px;
 }
 
-.container .right_Side {
+section.dark .left_Side {
+    background: #263339;
+}
+
+.right_Side {
     position: relative;
     background: #fff;
     padding: 40px;
+}
+
+section.dark .right_Side {
+    color: #263339;
 }
 
 .profileText {
@@ -78,6 +86,10 @@ body {
     text-align: center;
     font-weight: 600;
     line-height: 1.4em;
+}
+
+section.dark .profileText h2 {
+    color: #ccc;
 }
 
 .profileText h2 span {
@@ -174,9 +186,18 @@ body {
     margin-bottom: 10px;
 }
 
+section.dark .title2 {
+    color: #0273a7;
+}
+
 p {
     color: #333;
 }
+
+section.dark p {
+    color: #ccc;
+}
+
 
 .about .box {
     display: flex;
@@ -242,13 +263,17 @@ p {
     margin: 10px 0;
 }
 
+section.dark .interest ul li {
+    color: rgb(165, 163, 163);
+}
+
 .interest ul li .fa {
     color: #03a9f4;
     font-size: 18px;
     width: 20px;
 }
 
-footer {
+footer aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -258,11 +283,11 @@ footer {
     bottom: 0;
 }
 
-footer a {
+footer aside a {
     text-decoration: none;
 }
 
-footer .github-icon {
+footer aside .github-icon {
     margin-right: 10px;
 }
 
@@ -272,9 +297,15 @@ footer .github-icon {
 }
 
 @media (max-width: 1000px) {
-    .container {
+
+    nav li {
+        flex-direction: column;
+    }
+
+    section {
         margin: 10px;
         grid-template-columns: repeat(1, 1fr);
+        overflow-x: hidden;
     }
 
     .interest ul {
@@ -298,4 +329,151 @@ footer .github-icon {
     .skills .box {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.toggle {
+    top: 20px;
+    right: 20px;
+    background: #e9f5ff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.dark .toggle {
+    background: #404852;
+}
+
+.toggle::before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: #2fa1ff;
+}
+
+section.dark .toggle:before {
+    content: '\f185';
+    color: #fff;
+}
+
+section.dark {
+    background: #242924;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+
+.cv_code {
+    overflow: auto;
+    background-color: #3b3b3b;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+section.dark .cv_code {
+    background-color: #ffffff;
+    color: #3b3b3b;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+.header {
+    width: 100%;
+    z-index: 50;
+}
+
+.header_body {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.header_list {
+    display: flex;
+}
+
+.header_list li {
+    list-style: none;
+    margin: 0px 0px 0px 30px;
+}
+
+.header_link {
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.header_burger {
+    display: none;
+}
+
+.back_to_top{
+    position: fixed;
+    right: 250px;
+    bottom:150px;
+    width: 50px;
+    height: 50px;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color: #2fa1ff;
+    display:none;
+}
+
+.back_to_top:hover,
+.back_to_top:focus {
+    filter: brightness(1.5);
+    outline: none;
+}
+
+.back_to_top::before,
+.back_to_top::after{
+    content: '';
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back_to_top::before {
+    width: 5px;
+    height: 25px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color:#f5f0f6;
+}
+
+.back_to_top::after{
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 5px solid #f5f0f6;
+    border-left: 5px solid #f5f0f6;
+}
+
+.iframe-contaner{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-contaner iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
