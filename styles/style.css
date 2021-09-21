@@ -477,3 +477,7 @@ section.dark .cv_code {
     width: 100%;
     height: 100%;
 }
+
+.cv{
+    display:none;
+}
